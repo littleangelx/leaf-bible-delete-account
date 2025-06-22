@@ -13,4 +13,9 @@ document
       .from("email_delete_requests")
       .insert([{ email_address: email }])
       .select();
+
+    if (data) {
+      document.getElementById("confirmation").style.display = "block";
+      document.getElementById("deleteForm").style.display = "none";
+    }
   });
